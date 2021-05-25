@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bikes</title>
-</head>
-<body>
+{% extends "base.html" %}
+{ block content %}
+
+        <h2> Im extending the base template </h2>
     {% for bike in bikes %}
         {{ bike.nickname }}<br>
         {{ bike.make }}<br>
         {{ bike.model }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}

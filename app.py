@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 
 @app.route('/')
 @app.route("/bikes")
-def bikes():
+def bike():
     bikes = mongo.db.bikes.find()
     return render_template("bikes.html", bikes=bikes)
 

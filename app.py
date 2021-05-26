@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, flash, redirect, url_for, request, session
 from flask_pymongo import PyMongo
+from werkzeug.security import generate_password_hash, check_password_hash
 from bson.objectid import ObjectId
 
 
@@ -23,6 +24,11 @@ mongo = PyMongo(app)
 def bike():
     bikes = mongo.db.bikes.find()
     return render_template("bikes.html", bikes=bikes)
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
 
 
 if __name__ == '__main__':

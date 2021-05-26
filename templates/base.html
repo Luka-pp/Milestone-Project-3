@@ -30,9 +30,24 @@
     <li><a href="{{ url_for("bike") }}">Home</a></li>
     <li><a href="badges.html">Components</a></li>
     <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
+    <li><a href="{{ url_for("register") }}">Register</a></li>
   </ul>
 </header>
+
+<section>
+    <!-- flash messages -->
+    {% with messages = get_flashed_messages() %}
+        {%  if messages %}
+            {%  for message in messages %}
+                <div class="row flashes">
+                <h4 class="grey-darken center-align">{{ message }}</h4>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+</section>
+
 <main>
 
     {% block content %}

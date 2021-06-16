@@ -26,6 +26,11 @@ def bike():
     return render_template("bikes.html", bikes=bikes)
 
 
+@app.route('/members')
+def members():
+    return redirect(url_for("members"))
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -79,6 +84,7 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get("IP"),

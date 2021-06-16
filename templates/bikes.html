@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-
-    {% for bike in bikes %}
-        {{ bike.nickname }}<br>
-        {{ bike.make }}<br>
-        {{ bike.model }}<br>
-        {{ bike.gloves }}
-    {% endfor %}
+<div class="parallax-container">
+      <div class="parallax"><img src="{{ url_for("static", filename="img/hero-bike.jpg") }}" alt="Hero image"></div>
+    </div>
+    <div class="section grey darken-1">
+      <div class="row container center-align">
+        <h2 class="header ">Welcome to Moto Club Eire</h2>
+        <a class="waves-effect grey btn-large" href="#">Our Members</a>
+      </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="{{ url_for("static", filename="img/hero-bike2.jpg") }}" alt="Hero image"></div>
+    </div>
+    
 
 {% endblock %}

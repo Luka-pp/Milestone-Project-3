@@ -28,7 +28,7 @@ def bike():
 
 @app.route('/members')
 def members():
-    return redirect(url_for("members"))
+    return render_template("members.html")
 
 
 @app.route("/register", methods=["GET", "POST"])

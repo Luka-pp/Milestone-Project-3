@@ -28,7 +28,8 @@ def bike():
 
 @app.route('/members')
 def members():
-    return render_template("members.html")
+    bikes = mongo.db.bikes.find().limit(4)
+    return render_template("members.html", bikes=bikes)
 
 
 @app.route("/register", methods=["GET", "POST"])

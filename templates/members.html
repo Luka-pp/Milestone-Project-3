@@ -3,15 +3,17 @@
 
     <div class="row">
         {% for bike in bikes %}
-            <div class="col s6 m6">
-                    <div class="card">
+            <div class="col s12 m6 l6 xl6">
+                    <div class="card ">
                          <div class="card-image">
-                             <img src="static/img/hero-bike.jpg">
+                             <img class="" src="{{ bike.img_url }}">
                              <span class="card-title"><strong>{{ bike.nickname }}</strong></span>
                              <a href="" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fas fa-plus"></i></a>
                         </div>
                         <div class="card-content">
-                            <h5> {{ bike.make }} {{ bike.model }} {{ bike.owner }}</h5>
+                            <h5> {{ bike.make }} {{ bike.model }}</h5>
+                            <h5 class="right-align">Owned by: {{ bike.owner }}</h5>
+
                         </div>
                      </div>
              </div>

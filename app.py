@@ -87,13 +87,13 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/create_profile", methods=["GET", "POST"])
-def create_profile():
+@app.route("/add_bike", methods=["GET", "POST"])
+def add_bike():
     if request.method == "POST":
         bike = {
             "img_url": request.form.get("img_url"),
             "nickname": request.form.get("nickname"),
-            "make": request.form.get("nickname"),
+            "make": request.form.get("make"),
             "model": request.form.get("model"),
             "helmet": request.form.get("helmet"),
             "jacket": request.form.get("jacket"),
@@ -109,7 +109,7 @@ def create_profile():
         flash("Profile successfully created! ")
         return redirect(url_for("profile", username=session["user"]))
 
-    return render_template("create_profile.html")
+    return render_template("add_bike.html")
 
 
 if __name__ == '__main__':

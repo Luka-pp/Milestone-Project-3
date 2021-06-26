@@ -21,13 +21,17 @@
     </div>
 
 <ul class="pagination center-align">
-    <li class="disabled"><a href="#!"><i class="fas fa-chevron-left"></i></a></li>
-    <li class="active"><a href="#!">1</a></li>
-    <li class="waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!">3</a></li>
-    <li class="waves-effect"><a href="#!">4</a></li>
-    <li class="waves-effect"><a href="#!">5</a></li>
-    <li class="waves-effect"><a href="#!"><i class="fas fa-chevron-right"></i></a></li>
+    {% for pagenum in pages %}
+        {% if pagenum == page %}
+            <li class="active">
+                <span class="">{{ pagenum }}
+                    <span class="sr-only">(current)</span>
+                </span>
+            </li>
+        {% else %}
+            <li class=""><a class="" href="{{ url_for('members', page=pagenum) }}">{{ pagenum }}></a></li>
+        {% endif %}
+    {% endfor %}
 </ul>
 
 {% endblock %}

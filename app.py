@@ -1,4 +1,5 @@
 import os
+import math
 from flask import Flask, render_template, flash, redirect, url_for, request, session
 from flask_pymongo import PyMongo
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -23,13 +24,18 @@ mongo = PyMongo(app)
 @app.route("/bikes")
 def bike():
     bikes = mongo.db.bikes.find()
-    return render_template("bikes.html", bikes=bikes)
+    return render_template("index.html", bikes=bikes)
 
 
 @app.route('/members')
 def members():
-    bikes = mongo.db.bikes.find().limit(4)
-    return render_template("members.html", bikes=bikes)
+    per_page = 4
+    page = int(request.args.get("page", 1))
+    total = mongo.db.bikes.count_documents({})
+    all_bikes = mongo.db.bikes.find().skip((page - 1)*per_page).limit(per_page)
+    pages = range(1, int(math.ceil(total / per_page)) + 1)
+    return render_template("members.html", bikes=all_bikes, pages=pages, page=page, total=total)
+# bikes = mongo.db.bikes.find().limit(4)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -106,7 +112,7 @@ def add_bike():
             "owner": session["user"]
         }
         mongo.db.bikes.insert_one(bike)
-        flash("Profile successfully created! ")
+        flash("Bike successfully created!")
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("add_bike.html")

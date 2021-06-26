@@ -21,3 +21,6 @@ main {
 .flashes h4 {
     line-height: 2;
 }
+.capitalize{
+    text-transform: capitalize;
+}

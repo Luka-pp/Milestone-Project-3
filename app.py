@@ -35,7 +35,6 @@ def members():
     all_bikes = mongo.db.bikes.find().skip((page - 1)*per_page).limit(per_page)
     pages = range(1, int(math.ceil(total / per_page)) + 1)
     return render_template("members.html", bikes=all_bikes, pages=pages, page=page, total=total)
-# bikes = mongo.db.bikes.find().limit(4)
 
 
 @app.route("/register", methods=["GET", "POST"])

@@ -37,6 +37,12 @@ def members():
     return render_template("members.html", bikes=all_bikes, pages=pages, page=page, total=total)
 
 
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    username = mongo.db.user.find_one({"username": session["user"]})["username"]
+    return render_template("profile.html", username=username)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -79,12 +85,6 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
-    username = mongo.db.user.find_one({"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
-
-
 @app.route("/logout")
 def logout():
     flash("You have been logged out")
@@ -115,6 +115,12 @@ def add_bike():
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("add_bike.html")
+
+
+@app.route("/edit_bike/<bike_id>", methods=["GET", "POST"])
+def edit_bike(bike_id):
+    bike = mongo.db.find_one({"_id": ObjectId(bike_id)})
+    return render_template("edit_bike.html", bike=bike)
 
 
 if __name__ == '__main__':

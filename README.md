@@ -9,7 +9,7 @@ For link to the website click [Here](https://moto-club-eire.herokuapp.com/)
 
 Design has been focused to fit all screen sizes.
 
-![Am I Responsive]()
+![Am I Responsive](static/img/AmIResponsive.png)
 
 ## Who is this application for?
 

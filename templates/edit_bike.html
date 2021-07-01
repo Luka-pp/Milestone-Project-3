@@ -12,19 +12,27 @@
 
                          <h4>  <i class="fas fa-motorcycle"></i> Bike </h4>
                             <div class="input-field col s12">
-                              <textarea id="img_url" name="img_url" minlength="3" maxlength="150" class="validate materialize-textarea" required></textarea>
+                              <textarea id="img_url" name="img_url" minlength="3" maxlength="150" class="validate materialize-textarea" required>
+                                  {{ bike.img_url }}
+                              </textarea>
                               <label for="img_url">Image URL</label>
                             </div>
                             <div class="input-field col s12">
-                              <textarea id="make" name="make" minlength="2" maxlength="20" class="validate materialize-textarea" required></textarea>
+                              <textarea id="make" name="make" minlength="2" maxlength="20" class="validate materialize-textarea" required>
+                                  {{ bike.make }}
+                              </textarea>
                               <label for="make">Make of Motorcycle</label>
                             </div>
                             <div class="input-field col s12">
-                              <textarea id="model" name="model" minlength="3" maxlength="20" class="validate materialize-textarea" required></textarea>
+                              <textarea id="model" name="model" minlength="3" maxlength="20" class="validate materialize-textarea" required>
+                                  {{ bike.model }}
+                              </textarea>
                               <label for="model">Model of Motorcycle</label>
                             </div>
                             <div class="input-field col s12">
-                              <textarea id="nickname" name="nickname" minlength="3" maxlength="20" class="validate materialize-textarea" required></textarea>
+                              <textarea id="nickname" name="nickname" minlength="3" maxlength="20" class="validate materialize-textarea" required>
+                                  {{ bike.nickname }}
+                              </textarea>
                               <label for="nickname">Nickname of Motorcycle</label>
                             </div>
                       </div>
@@ -33,23 +41,33 @@
 
                           <h4> <i class="fas fa-hard-hat"></i> Gear </h4>
                           <div class="input-field col s12">
-                              <textarea id="helmet" name="helmet" minlength="3" maxlength="20" class="validate materialize-textarea" required></textarea>
+                              <textarea id="helmet" name="helmet" minlength="3" maxlength="20" class="validate materialize-textarea" required>
+                                  {{ bike.helmet }}
+                              </textarea>
                               <label for="helmet">Helmet</label>
                             </div>
                             <div class="input-field col s12">
-                              <textarea id="jacket" name="jacket" minlength="3" maxlength="20" class="validate materialize-textarea" required></textarea>
+                              <textarea id="jacket" name="jacket" minlength="3" maxlength="20" class="validate materialize-textarea" required>
+                                  {{ bike.jacket }}
+                              </textarea>
                               <label for="jacket">Jacket</label>
                             </div>
                             <div class="input-field col s12">
-                              <textarea id="trousers" name="trousers" minlength="3" maxlength="20" class="validate materialize-textarea" required></textarea>
+                              <textarea id="trousers" name="trousers" minlength="3" maxlength="20" class="validate materialize-textarea" required>
+                                  {{ bike.trousers }}
+                              </textarea>
                               <label for="trousers">Trousers</label>
                             </div>
                             <div class="input-field col s12">
-                              <textarea id="boots" name="boots" minlength="3" maxlength="20" class="validate materialize-textarea" required></textarea>
+                              <textarea id="boots" name="boots" minlength="3" maxlength="20" class="validate materialize-textarea" required>
+                                  {{ bike.boots }}
+                              </textarea>
                               <label for="boots">Boots</label>
                             </div>
                             <div class="input-field col s12">
-                              <textarea id="gloves" name="gloves" minlength="3" maxlength="20" class="validate materialize-textarea" required></textarea>
+                              <textarea id="gloves" name="gloves" minlength="3" maxlength="20" class="validate materialize-textarea" required>
+                                  {{ bike.gloves }}
+                              </textarea>
                               <label for="gloves">Gloves</label>
                             </div>
 
@@ -63,21 +81,27 @@
 
                             <div class="col s4">
                                 <div class="input-field col s12">
-                                  <textarea id="routestart" name="routestart" minlength="3" maxlength="20" class="validate materialize-textarea" required></textarea>
+                                  <textarea id="routestart" name="routestart" minlength="3" maxlength="20" class="validate materialize-textarea" required>
+                                      {{ bike.routestart }}
+                                  </textarea>
                                   <label for="routestart">Start</label>
                                 </div>
                             </div>
 
                             <div class="col s4">
                                 <div class="input-field col s12">
-                                  <textarea id="routevia" name="routevia" minlength="3" maxlength="20" class="validate materialize-textarea" required></textarea>
+                                  <textarea id="routevia" name="routevia" minlength="3" maxlength="20" class="validate materialize-textarea" required>
+                                      {{ bike.routevia }}
+                                  </textarea>
                                   <label for="routevia">Via</label>
                                 </div>
                             </div>
 
                             <div class="col s4">
                                 <div class="input-field col s12">
-                                  <textarea id="routeend" name="routeend" minlength="3" maxlength="20" class="validate materialize-textarea" required></textarea>
+                                  <textarea id="routeend" name="routeend" minlength="3" maxlength="20" class="validate materialize-textarea" required>
+                                      {{ bike.routeend }}
+                                  </textarea>
                                   <label for="routeend">End</label>
                                 </div>
                             </div>
@@ -86,8 +110,7 @@
 
 
                 <div class="row center-align">
-                      <button class="btn waves-effect waves-light" type="submit" >Submit
-                      </button>
+                      <button class="btn waves-effect waves-light" type="submit" >Submit</button>
                 </div>
 
 

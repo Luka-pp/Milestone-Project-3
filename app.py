@@ -39,8 +39,10 @@ def members():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    username = mongo.db.user.find_one({"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+    user = mongo.db.user.find_one({"username": username})
+    print(user)
+    bikes = mongo.db.bikes.find({"owner": user.get("username")})
+    return render_template("profile.html", user=user, bikes=bikes)
 
 
 @app.route("/register", methods=["GET", "POST"])

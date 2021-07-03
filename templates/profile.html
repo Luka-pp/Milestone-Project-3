@@ -19,11 +19,9 @@
                         <span class="card-title">
                             <strong class="text-shadow black-text"> {{ bike.nickname }} </strong>
                         </span>
-
                     </div>
                     <div class="card-content">
                         <div class="row">
-
                             <div class="col s6 center-align">
                                 {% if session["user"]== bike.owner %}
                                     <a class="btn grey" href="{{ url_for("edit_bike", bike_id=bike._id) }}"> Edit </a>
@@ -33,55 +31,40 @@
                                 Make: {{ bike.make }} <br>
                                 Model: {{ bike.model }}
                             </div>
-
                             <div class="col s6 center-align">
-
                                 <h4> Gear </h4>
                                 Helmet: {{ bike.helmet }}<br>
                                 Jacket: {{ bike.jacket }}<br>
                                 Trousers: {{ bike.trousers }}<br>
                                 Boots: {{ bike.boots }}<br>
                                 Gloves: {{ bike.gloves }}
-
                             </div>
-
                         </div>
                         <div class="row center-align">
                             <h4> Favorite Route </h4>
                         </div>
                         <div class="row center-align ">
-
                             <div class="col s4">
                                 <h5> Start</h5>
                             </div>
-
                             <div class="col s4">
                                 <h5> Via</h5>
                             </div>
-
                             <div class="col s4">
                                 <h5> End</h5>
                             </div>
-
                         </div>
                         <div class="row center-align">
-
                             <div class="col s4">
                                 {{ bike.routestart }}
                             </div>
-
                             <div class="col s4">
                                 {{ bike.routevia }}
                             </div>
-
                             <div class="col s4">
-
                                 {{ bike.routeend }}
                             </div>
-
                         </div>
-
-
                     </div>
                 </div>
             </div>

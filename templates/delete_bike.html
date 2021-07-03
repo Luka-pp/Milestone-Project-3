@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="row center-align">
-<h4 > Are You Sure You want to delete {{ bike.nickname }}?</h4>
-</div>
     <div class="row center-align">
-        <a class="btn red" href="">Yes</a>
-        <a class="btn grey" href="">No</a>
+        <h4> Are You Sure You want to delete {{ bike.nickname }}?</h4>
+    </div>
+    <div class="row center-align">
 
+        <form class="col s12" action="{{ url_for("delete_bike",bike_id=bike._id) }}" method="POST">
+            <div class="row center-align">
+                <button class="btn waves-effect waves-light red " type="submit">Yes</button>
+                <a class="btn grey" href="{{ url_for("profile", username=session["user"]) }}">No</a>
+            </div>
+        </form>
     </div>
 
 {% endblock %}

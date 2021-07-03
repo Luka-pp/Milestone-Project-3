@@ -143,6 +143,17 @@ def edit_bike(bike_id):
     return render_template("edit_bike.html", bike=bike)
 
 
+@app.route("/delete_bike/<bike_id>",  methods=['GET', 'POST'])
+def delete_bike(bike_id):
+    if request.method == "GET":
+        bike = mongo.db.bikes.find_one({"_id": ObjectId(bike_id)})
+        return render_template("delete_bike.html", bike=bike)
+
+   # bike_id = mongo.db.bikes.remove({"_id": ObjectId(bike_id)})
+   # flash("Bike Successfully Deleted")
+   # return render_template("delete_bike.html", bike_id=bike_id)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

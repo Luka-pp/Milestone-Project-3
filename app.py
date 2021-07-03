@@ -40,7 +40,6 @@ def members():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     user = mongo.db.user.find_one({"username": username})
-    print(user)
     bikes = mongo.db.bikes.find({"owner": user.get("username")})
     return render_template("profile.html", user=user, bikes=bikes)
 
@@ -121,7 +120,26 @@ def add_bike():
 
 @app.route("/edit_bike/<bike_id>", methods=["GET", "POST"])
 def edit_bike(bike_id):
-    bike = mongo.db.find_one({"_id": ObjectId(bike_id)})
+    if request.method == "POST":
+        submit = {
+            "img_url": request.form.get("img_url"),
+            "nickname": request.form.get("nickname"),
+            "make": request.form.get("make"),
+            "model": request.form.get("model"),
+            "helmet": request.form.get("helmet"),
+            "jacket": request.form.get("jacket"),
+            "trousers": request.form.get("trousers"),
+            "boots": request.form.get("boots"),
+            "gloves": request.form.get("gloves"),
+            "routestart": request.form.get("routestart"),
+            "routevia": request.form.get("routevia"),
+            "routeend": request.form.get("routeend"),
+            "owner": session["user"]
+        }
+        mongo.db.bikes.update({"_id": ObjectId(bike_id)}, submit)
+        flash("Bike Successfully Updated")
+
+    bike = mongo.db.bikes.find_one({"_id": ObjectId(bike_id)})
     return render_template("edit_bike.html", bike=bike)
 
 

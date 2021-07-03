@@ -6,115 +6,128 @@
 
     <form class="col s12" action="{{ url_for("edit_bike",bike_id=bike._id) }}" method="POST">
 
-                <div class="row">
+        <div class="row">
 
-                      <div class="col s6 center-align">
+            <div class="col s6 center-align">
 
-                         <h4>  <i class="fas fa-motorcycle"></i> Bike </h4>
-                            <div class="input-field col s12">
-                              <textarea id="img_url" name="img_url" minlength="3" maxlength="150" class="validate materialize-textarea" required>
-                                  {{ bike.img_url }}
+                <h4><i class="fas fa-motorcycle"></i> Bike </h4>
+                <div class="input-field col s12">
+                              <textarea id="img_url" name="img_url" minlength="3" maxlength="150"
+                                        class="validate materialize-textarea" required>
+                                  {{- bike.img_url -}}
                               </textarea>
-                              <label for="img_url">Image URL</label>
-                            </div>
-                            <div class="input-field col s12">
-                              <textarea id="make" name="make" minlength="2" maxlength="20" class="validate materialize-textarea" required>
-                                  {{ bike.make }}
-                              </textarea>
-                              <label for="make">Make of Motorcycle</label>
-                            </div>
-                            <div class="input-field col s12">
-                              <textarea id="model" name="model" minlength="3" maxlength="20" class="validate materialize-textarea" required>
-                                  {{ bike.model }}
-                              </textarea>
-                              <label for="model">Model of Motorcycle</label>
-                            </div>
-                            <div class="input-field col s12">
-                              <textarea id="nickname" name="nickname" minlength="3" maxlength="20" class="validate materialize-textarea" required>
-                                  {{ bike.nickname }}
-                              </textarea>
-                              <label for="nickname">Nickname of Motorcycle</label>
-                            </div>
-                      </div>
-
-                      <div class="col s6 center-align">
-
-                          <h4> <i class="fas fa-hard-hat"></i> Gear </h4>
-                          <div class="input-field col s12">
-                              <textarea id="helmet" name="helmet" minlength="3" maxlength="20" class="validate materialize-textarea" required>
-                                  {{ bike.helmet }}
-                              </textarea>
-                              <label for="helmet">Helmet</label>
-                            </div>
-                            <div class="input-field col s12">
-                              <textarea id="jacket" name="jacket" minlength="3" maxlength="20" class="validate materialize-textarea" required>
-                                  {{ bike.jacket }}
-                              </textarea>
-                              <label for="jacket">Jacket</label>
-                            </div>
-                            <div class="input-field col s12">
-                              <textarea id="trousers" name="trousers" minlength="3" maxlength="20" class="validate materialize-textarea" required>
-                                  {{ bike.trousers }}
-                              </textarea>
-                              <label for="trousers">Trousers</label>
-                            </div>
-                            <div class="input-field col s12">
-                              <textarea id="boots" name="boots" minlength="3" maxlength="20" class="validate materialize-textarea" required>
-                                  {{ bike.boots }}
-                              </textarea>
-                              <label for="boots">Boots</label>
-                            </div>
-                            <div class="input-field col s12">
-                              <textarea id="gloves" name="gloves" minlength="3" maxlength="20" class="validate materialize-textarea" required>
-                                  {{ bike.gloves }}
-                              </textarea>
-                              <label for="gloves">Gloves</label>
-                            </div>
-
-                      </div>
-
+                    <label for="img_url">Image URL</label>
                 </div>
-                    <div class="row center-align">
-                       <h4> <i class="fas fa-route"></i> Favorite Route </h4>
-                    </div>
-                    <div class="row center align">
+                <div class="input-field col s12">
+                              <textarea id="make" name="make" minlength="2" maxlength="20"
+                                        class="validate materialize-textarea" required>
+                                  {{- bike.make -}}
+                              </textarea>
+                    <label for="make">Make of Motorcycle</label>
+                </div>
+                <div class="input-field col s12">
+                              <textarea id="model" name="model" minlength="3" maxlength="20"
+                                        class="validate materialize-textarea"  required>
+                                  {{- bike.model -}}
+                              </textarea>
+                    <label for="model">Model of Motorcycle</label>
+                </div>
+                <div class="input-field col s12">
+                              <textarea id="nickname" name="nickname" minlength="3" maxlength="20"
+                                        class="validate materialize-textarea" required>
+                                  {{- bike.nickname -}}
+                              </textarea>
+                    <label for="nickname">Nickname of Motorcycle</label>
+                </div>
+            </div>
 
-                            <div class="col s4">
-                                <div class="input-field col s12">
-                                  <textarea id="routestart" name="routestart" minlength="3" maxlength="20" class="validate materialize-textarea" required>
-                                      {{ bike.routestart }}
-                                  </textarea>
-                                  <label for="routestart">Start</label>
-                                </div>
-                            </div>
+            <div class="col s6 center-align">
 
-                            <div class="col s4">
-                                <div class="input-field col s12">
-                                  <textarea id="routevia" name="routevia" minlength="3" maxlength="20" class="validate materialize-textarea" required>
-                                      {{ bike.routevia }}
-                                  </textarea>
-                                  <label for="routevia">Via</label>
-                                </div>
-                            </div>
-
-                            <div class="col s4">
-                                <div class="input-field col s12">
-                                  <textarea id="routeend" name="routeend" minlength="3" maxlength="20" class="validate materialize-textarea" required>
-                                      {{ bike.routeend }}
-                                  </textarea>
-                                  <label for="routeend">End</label>
-                                </div>
-                            </div>
-
-                    </div>
-
-
-                <div class="row center-align">
-                      <button class="btn waves-effect waves-light" type="submit" >Submit</button>
+                <h4><i class="fas fa-hard-hat"></i> Gear </h4>
+                <div class="input-field col s12">
+                              <textarea id="helmet" name="helmet" minlength="3" maxlength="20"
+                                        class="validate materialize-textarea" required>
+                                  {{- bike.helmet -}}
+                              </textarea>
+                    <label for="helmet">Helmet</label>
+                </div>
+                <div class="input-field col s12">
+                              <textarea id="jacket" name="jacket" minlength="3" maxlength="20"
+                                        class="validate materialize-textarea" required>
+                                  {{- bike.jacket -}}
+                              </textarea>
+                    <label for="jacket">Jacket</label>
+                </div>
+                <div class="input-field col s12">
+                              <textarea id="trousers" name="trousers" minlength="3" maxlength="20"
+                                        class="validate materialize-textarea" required>
+                                  {{- bike.trousers -}}
+                              </textarea>
+                    <label for="trousers">Trousers</label>
+                </div>
+                <div class="input-field col s12">
+                              <textarea id="boots" name="boots" minlength="3" maxlength="20"
+                                        class="validate materialize-textarea" required>
+                                  {{- bike.boots -}}
+                              </textarea>
+                    <label for="boots">Boots</label>
+                </div>
+                <div class="input-field col s12">
+                              <textarea id="gloves" name="gloves" minlength="3" maxlength="20"
+                                        class="validate materialize-textarea" required>
+                                  {{- bike.gloves -}}
+                              </textarea>
+                    <label for="gloves">Gloves</label>
                 </div>
 
+            </div>
 
-</form>
+        </div>
+        <div class="row center-align">
+            <h4><i class="fas fa-route"></i> Favorite Route </h4>
+        </div>
+        <div class="row center align">
+
+            <div class="col s4">
+                <div class="input-field col s12">
+                                  <textarea id="routestart" name="routestart" minlength="3" maxlength="20"
+                                            class="validate materialize-textarea" required>
+                                      {{- bike.routestart -}}
+                                  </textarea>
+                    <label for="routestart">Start</label>
+                </div>
+            </div>
+
+            <div class="col s4">
+                <div class="input-field col s12">
+                                  <textarea id="routevia" name="routevia" minlength="3" maxlength="20"
+                                            class="validate materialize-textarea" required>
+                                      {{- bike.routevia -}}
+                                  </textarea>
+                    <label for="routevia">Via</label>
+                </div>
+            </div>
+
+            <div class="col s4">
+                <div class="input-field col s12">
+                                  <textarea id="routeend" name="routeend" minlength="3" maxlength="20"
+                                            class="validate materialize-textarea" required>
+                                      {{- bike.routeend -}}
+                                  </textarea>
+                    <label for="routeend">End</label>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row center-align">
+            <a class="btn red" href="{{ url_for("profile", username=bike.owner) }}"> Cancel</a>
+            <button class="btn waves-effect waves-light " type="submit">Submit</button>
+        </div>
+
+
+    </form>
 
 
 

@@ -12,6 +12,8 @@ Design has been focused to fit all screen sizes.
 ![Am I Responsive](static/img/AmIResponsive.png)
 
 ## Who is this application for?
-
+This web application is designed for all the motorcycle enthusiasts. They can share their motorcycle and also 
+view the motorcycles of the other club members. Users can have multiple bikes added. As well as Motorcycles application also allows 
+users to add all of their safety gear and their favorite route. 
 
 ## What does it do?

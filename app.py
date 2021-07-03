@@ -47,7 +47,7 @@ def profile(username):
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        existing_user = mongo.db.users.find_one({"username": request.form.get("username").lower()})
+        existing_user = mongo.db.user.find_one({"username": request.form.get("username").lower()})
 
         if existing_user:
             flash("Username already exists")

@@ -16,7 +16,9 @@
                 <div class="card">
                     <div class="card-image">
                         <img src="{{ bike.img_url }}">
-                        <span class="card-title">{{ user.username }}</span>
+                        <span class="card-title">
+                            <strong class="text-shadow black-text"> {{ bike.nickname }} </strong>
+                        </span>
 
                     </div>
                     <div class="card-content">
@@ -28,15 +30,18 @@
                                     <a class="btn red" href="#"> Delete </a>
                                 {% endif %}
                                 <h4> Bike </h4>
-                                make<br>
-                                model
+                                Make: {{ bike.make }} <br>
+                                Model: {{ bike.model }}
                             </div>
 
                             <div class="col s6 center-align">
 
                                 <h4> Gear </h4>
-                                make<br>
-                                model
+                                Helmet: {{ bike.helmet }}<br>
+                                Jacket: {{ bike.jacket }}<br>
+                                Trousers: {{ bike.trousers }}<br>
+                                Boots: {{ bike.boots }}<br>
+                                Gloves: {{ bike.gloves }}
 
                             </div>
 
@@ -44,18 +49,34 @@
                         <div class="row center-align">
                             <h4> Favorite Route </h4>
                         </div>
-                        <div class="row center align">
+                        <div class="row center-align ">
 
                             <div class="col s4">
-                                start
+                                <h5> Start</h5>
                             </div>
 
                             <div class="col s4">
-                                via
+                                <h5> Via</h5>
                             </div>
 
                             <div class="col s4">
-                                end
+                                <h5> End</h5>
+                            </div>
+
+                        </div>
+                        <div class="row center-align">
+
+                            <div class="col s4">
+                                {{ bike.routestart }}
+                            </div>
+
+                            <div class="col s4">
+                                {{ bike.routevia }}
+                            </div>
+
+                            <div class="col s4">
+
+                                {{ bike.routeend }}
                             </div>
 
                         </div>

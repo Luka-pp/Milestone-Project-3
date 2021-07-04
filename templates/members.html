@@ -3,20 +3,20 @@
 
     <div class="row">
         {% for bike in bikes %}
-            <div class="col s12 m6 l6 xl6">
+            <div class="col s12 m12 l12 xl6 offset-xl3">
                 <div class="card ">
                     <div class="card-image">
                         <img src="{{ bike.img_url }}">
                         <span id="sp" class="card-title grey black-text"><strong>{{ bike.nickname }}</strong></span>
                         <a href="{{ url_for("profile", username=bike.owner) }}" data-position="left"
                            data-tooltip="Click For More"
-                           class="btn-floating halfway-fab  red tooltipped"><i
+                           class="btn-floating halfway-fab red tooltipped"><i
                                 class="fas fa-plus"></i></a>
                     </div>
                     <div class="card-content">
+
                         <h5> {{ bike.make }} {{ bike.model }}</h5>
                         <h5 class="right-align">Owned by: {{ bike.owner }}</h5>
-
                     </div>
                 </div>
             </div>

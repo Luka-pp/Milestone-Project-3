@@ -1,15 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="row">
-        <div class="col s12 m2 offset-m10 ">
-            <form action="{{ url_for("search") }}">
-                <input type="text" name="query" required/>
-                <button type="submit" class="btn grey ">Search Bikes!</button>
-            </form>
-        </div>
-    </div>
-    <div class="row">
-        {% for bike in bikes %}
+
+
+    <h1>You have searched for: {{ query }}. Here are the results:</h1>
+    <div class="row text-center">
+        {% for bike in results %}
             <div class="col s12 m12 l12 xl6 offset-xl3">
                 <div class="card ">
                     <div class="card-image">
@@ -21,7 +16,6 @@
                                 class="fas fa-plus"></i></a>
                     </div>
                     <div class="card-content">
-
                         <h5> {{ bike.make }} {{ bike.model }}</h5>
                         <h5 class="right-align">Owned by: {{ bike.owner }}</h5>
                     </div>
@@ -29,21 +23,5 @@
             </div>
         {% endfor %}
     </div>
-
-    <ul class="pagination center-align">
-        {% for pagenum in pages %}
-            {% if pagenum == page %}
-                <li class="active grey">
-                    <a><span>{{ pagenum }}
-                    <span class="sr-only">(current)</span></span>
-                    </a>
-                </li>
-            {% else %}
-                <li class="grey">
-                    <a href="{{ url_for('members', page=pagenum) }}"> {{ pagenum }}</a>
-                </li>
-            {% endif %}
-        {% endfor %}
-    </ul>
 
 {% endblock %}

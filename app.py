@@ -1,5 +1,7 @@
 import os
 import math
+import re
+
 from flask import Flask, render_template, flash, redirect, url_for, request, session
 from flask_pymongo import PyMongo
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -152,6 +154,22 @@ def delete_bike(bike_id):
         mongo.db.bikes.remove({"_id": ObjectId(bike_id)})
         flash("Deleted")
         return redirect(url_for("profile", username=session["user"]))
+
+
+@app.route("/search")
+def search():
+    orig_query = request.args["query"].strip()
+    print(len(orig_query))
+    if len(orig_query) > 0:
+        results = mongo.db.bikes.find({
+            "$or": [
+                {"make": re.compile(orig_query, re.IGNORECASE)},
+                {"model": re.compile(orig_query, re.IGNORECASE)}
+            ]
+        })
+        return render_template("search.html", query=orig_query, results=results)
+    flash("You Cannot enter empty search query, showing all bikes")
+    return redirect(url_for("members"))
 
 
 @app.errorhandler(404)

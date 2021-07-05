@@ -154,6 +154,11 @@ def delete_bike(bike_id):
         return redirect(url_for("profile", username=session["user"]))
 
 
+@app.errorhandler(404)
+def handle_404(exception):
+    return render_template("404.html", exception=exception)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

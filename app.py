@@ -50,7 +50,7 @@ def profile(username):
         flash("Comment successfully posted!")
         return redirect(url_for("profile", username=session["user"]))
 
-    return render_template("profile.html", user=user, bikes=bikes, )
+    return render_template("profile.html", user=user, bikes=bikes)
 
 
 @app.route("/register", methods=["GET", "POST"])

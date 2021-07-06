@@ -68,6 +68,27 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row center-align">
+                        <div class="row">
+                            <h4> Comments: </h4>
+                        </div>
+                        <div class="row">
+                            comment here <br>
+                            Posted by: <span class="underline"> Here </span>
+                        </div>
+                        <div class="row">
+                            <form class="col col s12 m8 offset-m2" method="POST" action="{{ url_for("profile", username=session.user) }}">
+                                <div class="row">
+                                    <div class="input-field ">
+                                        <textarea id="comment" name="comment" minlength="2" maxlength="200"
+                                                  class=" materialize-textarea center-align" ></textarea>
+                                        <label for="comment">Add comment here</label>
+                                        <button type="submit" class="btn grey ">Post Comment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

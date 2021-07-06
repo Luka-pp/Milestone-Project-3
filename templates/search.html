@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-    <h1>You have searched for: {{ query }}. Here are the results:</h1>
+<div class="center-align">
+    <h5>You have searched for: <span class="underline">{{ query }}</span> <br>
+        Here are the results:</h5>
+</div>
     <div class="row text-center">
         {% for bike in results %}
             <div class="col s12 m12 l12 xl6 offset-xl3">

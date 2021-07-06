@@ -7,13 +7,10 @@ from flask_pymongo import PyMongo
 from werkzeug.security import generate_password_hash, check_password_hash
 from bson.objectid import ObjectId
 
-
 if os.path.exists("env.py"):
     import env
 
-
 app = Flask(__name__)
-
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
@@ -34,7 +31,7 @@ def members():
     per_page = 4
     page = int(request.args.get("page", 1))
     total = mongo.db.bikes.count_documents({})
-    all_bikes = mongo.db.bikes.find().skip((page - 1)*per_page).limit(per_page)
+    all_bikes = mongo.db.bikes.find().skip((page - 1) * per_page).limit(per_page)
     pages = range(1, int(math.ceil(total / per_page)) + 1)
     return render_template("members.html", bikes=all_bikes, pages=pages, page=page, total=total)
 
@@ -43,7 +40,17 @@ def members():
 def profile(username):
     user = mongo.db.user.find_one({"username": username})
     bikes = mongo.db.bikes.find({"owner": user.get("username")})
-    return render_template("profile.html", user=user, bikes=bikes)
+
+    if request.method == "POST":
+        comment = {
+            "comment": request.form.get("comment"),
+            "posted_by": session["user"]
+        }
+        mongo.db.comments.insert_one(comment)
+        flash("Comment successfully posted!")
+        return redirect(url_for("profile", username=session["user"]))
+
+    return render_template("profile.html", user=user, bikes=bikes, )
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -145,7 +152,7 @@ def edit_bike(bike_id):
     return render_template("edit_bike.html", bike=bike)
 
 
-@app.route("/delete_bike/<bike_id>",  methods=['GET', 'POST'])
+@app.route("/delete_bike/<bike_id>", methods=['GET', 'POST'])
 def delete_bike(bike_id):
     if request.method == "GET":
         bike = mongo.db.bikes.find_one({"_id": ObjectId(bike_id)})

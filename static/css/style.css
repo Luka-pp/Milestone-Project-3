@@ -35,6 +35,9 @@ main {
 #sp{
     padding: 12px;
 }
+.underline{
+    text-decoration: underline;
+}
 @media only screen and (max-width: 600px) {
     #sp{
         padding: 0;

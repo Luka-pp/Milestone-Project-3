@@ -89,6 +89,8 @@ Each card consists of the motorcycle image, Motorcycle nickname in the bottom le
 of the motorcycle and information of its owner.
 Each card also contains a call-to-action button with tooltip *Click for more!* which redirects user to the full details of that Motorcycle
 
+At the bottom of the page there is pagination for user to brows through motorcycles collection.
+
 #### Profile Page
 
 This page consists of the header which displays the username of the user and information about all motorcycles he added.
@@ -130,15 +132,40 @@ Footer is same throughout the whole website and it consists of the text area wit
 ### Skeleton Plane
 
 This website is designed to work on all the screens. 
+
 Wireframes can be found [Here](#)
 
 ## Features
 
 ### Existing Features
 
+* Created in *HTML*, *CSS*, *Javascript*, *Python*, *Flask* and *Materialize*  
+* Database used for the project is *MongoDB*
+* Log In, Log Out, Edit and Delete functionality
+* Members page which displays all the member's motorcycles with links to their full profiles
+* Comment section so the users ca interact with each other
+* Custom 404 page 
+* Full user verification 
+
 ### Features for future implementation
 
+* Organize events functionality
+* Club merchandise shop
+* Allowing user to upload their own images, and allowing them to upload more images for each motorcycle
+* 
+
 ## Technologies used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML) for markup
+* [CSS3](https://en.wikipedia.org/wiki/CSS) for style
+* [Python](https://www.python.org/) for backend development
+* [Flask](https://palletsprojects.com/p/flask/) for frameworks
+* [MongoDB](https://www.mongodb.com/) as the database for the website 
+* [Git](https://git-scm.com/) for version control
+* [GitHub](https://github.com/) as a remote repository
+* [Materialize](https://materializecss.com/) for main frame of the website
+* [JavaScript](https://www.javascript.com/) For functionality of some parts of website
+* [PyCharm](https://www.jetbrains.com/pycharm/) As my main editor and local repository
 
 ## Resources
 

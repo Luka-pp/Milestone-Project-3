@@ -135,6 +135,21 @@ This website is designed to work on all the screens.
 
 Wireframes can be found [Here](#)
 
+### Surface Plane
+
+**Colour** 
+Throughout the whole website two colors are used:
+1. \#7575 Grey 
+ - used for Header, Footer, and the buttons  
+
+2. \#eeeeee Whitesmoke
+ - used for the background color of the whole website
+
+**Typography**
+
+The font has been acquired from **Google Fonts** and tho suit the overall looks of the website 
+**Tourney** font has been uset in black color with the weight of 900
+
 ## Features
 
 ### Existing Features
@@ -166,8 +181,25 @@ Wireframes can be found [Here](#)
 * [Materialize](https://materializecss.com/) for main frame of the website
 * [JavaScript](https://www.javascript.com/) For functionality of some parts of website
 * [PyCharm](https://www.jetbrains.com/pycharm/) As my main editor and local repository
+* [Heroku](https://www.heroku.com/) For deployment of the website
 
 ## Resources
+
+* [pixabay](https://pixabay.com/) for images with free license
+* [Code Institute](https://codeinstitute.net/) course materials
+* [Code Institute Slack](https://codeinstitute.net/) Slack Community
+* [MDN](https://developer.mozilla.org/en-US/) general help and pointers
+* [Stackoverflow](https://stackoverflow.com/) general help and pointers
+* [Youtube](https://www.youtube.com/) general help and pointers
+* [W3schools](https://www.w3schools.com/) general help and pointers
+* [Am I Responsive](http://ami.responsivedesign.is/) for a responsive image in Read Me
+* [Soda PDF](https://www.sodapdf.com/jpg-to-pdf/) to convert images to PDF
+* [LogoMakr](https://logomakr.com/) for creation of the logo
+* [Google](https://www.google.ie/) for image links for motorcycles and general help
+* [Google Fonts](https://fonts.google.com/) for the font used throughout the website
+* [Font Awesome](https://fontawesome.com/) for icons
+
+
 
 ## Testing
 

@@ -199,11 +199,59 @@ The font has been acquired from **Google Fonts** and tho suit the overall looks 
 * [Google Fonts](https://fonts.google.com/) for the font used throughout the website
 * [Font Awesome](https://fontawesome.com/) for icons
 
-
-
 ## Testing
+
+Testing has been done and documented in [Testing.md](https://github.com/Luka-pp/Milestone-Project-3/blob/master/Testing.md) 
 
 ## Version Control
 
+### Git & GitHub
+
+I used **[PyCharm](https://www.jetbrains.com/pycharm/)** as a local repository and IDE and **[GitHub](https://github.com/)** as a remote repository. The process of version control was:
+
+* First I created a new repository on GitHub  
+* I have then connected my GitHub account and my PyCharm IDE
+* I have then opened that repository in PyCharm and started coding
+* In PyCharm I have created all the pages and folders
+* I was then saving my work and pushing it to GitHub repository to keep it safe
+* Process for saving, committing and pushing it to remote repository goes as follows:
+* In the main window of PyCharm click on **Git**
+* On drop down menu click on **Commit**
+* The commit interface will open on the left side and after adding the commit message click on commit
+in the left bottom corner  
+* Work is now committed to the master branch
+* To push that commit to the **GitHub** I clicked on **Commit and Push** button 
+in the same window
+* On click on **Commit and Push** button the pop up window will show where I 
+needed to confirm that I want to push the work to my GitHub repository
+  
 ## Deployment
+
+This project requires back-end technologies, so so for the deployment [Heroku](https://www.heroku.com/) was used. **Heroku**
+is a cloud platform where users can host their projects. This platform offers free service as well as the paid one.
+For the purpose of this project free version was enough.
+
+There are two ways to deploy a website on Heroku: 
+1. Heroku Command Line Interface (CLI)
+2. Connecting to GitHub repository. Connecting to GitHub repository which is much easier and recommended by a Code Institute 
+
+Steps that needed to be taken before actual deployment to **Heroku**:
+
+1. Creating **requirements.txt**
+   - this file contains all the necessary dependencies so Heroku can have them ready for the project
+2. Creating **procfile**
+   -  this file contains necessary derails about the project so that heroku know what and where is he deploying and in which programming language
+    
+Deployment steps:
+
+- Creating account on **Heroku**
+- Creating new app by clicking on *New* and then *Create new app*
+- Type in the unique name on the app and choose a region closest to us for deployment
+- Navigate to *Deploy* section and connect to **GitHub**
+- Before enabling automatic deploys, hidden variables such as IP address, PORT, SECRET_KEY, MONGO_URI and MONGO_DATABASE 
+  need to be recorded in Heroku
+- **Settings**, click **Reveal Config Vars** and fill out necessary keys and values
+- When all the hidden variables done, click **Enable Automatic Deploys** and click **Deploy Branch*
+- Once app deploys the confirmation message will be shown
+
 

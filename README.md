@@ -14,7 +14,8 @@ Application is designed for all screen sizes.
 
 ## Who is this application for?
 
-This web application is designed for all the motorcycle enthusiasts. It showcases the
+This web application is designed for all the motorcycle enthusiasts. It showcases the *front* and *back* end development
+and their usage for the web development.
 
 ## What does it do?
 
@@ -173,7 +174,7 @@ their respective social media and copyright information
 
 This website is designed to work on all the screens.
 
-Wireframes can be found [Here](#)
+Wireframes and their evolution can be found [Here](./static/doc/wireframes.pdf)
 
 ### Surface Plane
 
@@ -319,6 +320,5 @@ collections which will be used throughout the project.
 3. **Bikes** Collection
 
 - used to store all the details about users motorcycles and their gear
-
 
 ### Special thanks to my mentor Spencer Barriball for help and advice throughout the development!

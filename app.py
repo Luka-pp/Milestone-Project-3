@@ -40,6 +40,8 @@ def members():
 def profile(username):
     user = mongo.db.user.find_one({"username": username})
     bikes = mongo.db.bikes.find({"owner": user.get("username")})
+    comments = mongo.db.comments.find()
+
 
     if request.method == "POST":
         comment = {
@@ -50,7 +52,7 @@ def profile(username):
         flash("Comment successfully posted!")
         return redirect(url_for("profile", username=session["user"]))
 
-    return render_template("profile.html", user=user, bikes=bikes)
+    return render_template("profile.html", user=user, bikes=bikes, comments=comments)
 
 
 @app.route("/register", methods=["GET", "POST"])

@@ -52,9 +52,20 @@ correctly.
     - Usernames and passwords are saved within database. Once user tys to log in the function checks if the username and
       password match. If they do user will be logged in to the website. If either username or password do not match
       flash message will display letting user know that username or password are not correct.
-      
+
 3. **Add Bike**
-   -All of the fields are required for this form. 
+    - All the fields work as intended. form focuses on the field properly and is validated.
+    - All the fields are correctly saved to the database.
+    - Manual testing of all the fields carried out.
+
+4. **Edit Bike**
+    - Same layout as the add bike form. Difference is that this form comes with the pre-populated form so the user can
+      see what he/she has had there before and make desired changes
+    - After submitting changes the database gets updated. 
+    - Manual test carried out for all the fields.
+   
+5. **Search**
+    - 
 
 ### Defensive programming
 

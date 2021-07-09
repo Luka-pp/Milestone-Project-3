@@ -40,19 +40,8 @@ def members():
 def profile(username):
     user = mongo.db.user.find_one({"username": username})
     bikes = mongo.db.bikes.find({"owner": user.get("username")})
-    comments = mongo.db.comments.find()
 
-
-    if request.method == "POST":
-        comment = {
-            "comment": request.form.get("comment"),
-            "posted_by": session["user"]
-        }
-        mongo.db.comments.insert_one(comment)
-        flash("Comment successfully posted!")
-        return redirect(url_for("profile", username=session["user"]))
-
-    return render_template("profile.html", user=user, bikes=bikes, comments=comments)
+    return render_template("profile.html", user=user, bikes=bikes)
 
 
 @app.route("/register", methods=["GET", "POST"])

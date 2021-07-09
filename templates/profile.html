@@ -13,7 +13,7 @@
             <div class="col s12 m12 l12 xl6 offset-xl3">
                 <div class="card">
                     <div class="card-image">
-                        <img src="{{ bike.img_url }}">
+                        <img src="{{ bike.img_url }}" alt="Profile Image">
                         <span id="sp" class="card-title black-text grey">
                             <strong> {{ bike.nickname }} </strong>
                         </span>
@@ -67,33 +67,6 @@
                                 <p>{{ bike.routeend }}</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="row center-align">
-                        <div class="row">
-                            <h4> Comments: </h4>
-                        </div>
-
-                        {% for comment in comments %}
-                            <div class="row">
-                                {{ comment.comment }} <br>
-                                Posted by: <span class="underline"> {{ comment.posted_by }} </span>
-                            </div>
-                        {% endfor %}
-                        {% if session["user"] %}
-                            <div class="row">
-                                <form class="col col s12 m8 offset-m2" method="POST"
-                                      action="{{ url_for("profile", username=session.user) }}">
-                                    <div class="row">
-                                        <div class="input-field ">
-                                        <textarea id="comment" name="comment" minlength="2" maxlength="200"
-                                                  class=" materialize-textarea center-align"></textarea>
-                                            <label for="comment">Add comment here</label>
-                                            <button type="submit" class="btn grey ">Post Comment</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        {% endif %}
                     </div>
                 </div>
             </div>

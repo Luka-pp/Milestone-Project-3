@@ -10,7 +10,7 @@
             <div class="col s12 m12 l12 xl6 offset-xl3">
                 <div class="card ">
                     <div class="card-image">
-                        <img src="{{ bike.img_url }}">
+                        <img src="{{ bike.img_url }}" alt="Profile Image">
                         <span id="sp" class="card-title grey black-text"><strong>{{ bike.nickname }}</strong></span>
                         <a href="{{ url_for("profile", username=bike.owner) }}" data-position="left"
                            data-tooltip="Click For More"

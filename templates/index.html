@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="parallax-container">
-      <div class="parallax"><img src="{{ url_for("static", filename="img/hero-bike.jpg") }}" alt="Hero image"></div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="{{ url_for("static", filename="img/hero-bike.jpg") }}" alt="Hero image"></div>
     </div>
     <div class="section grey darken-1">
-      <div class="row container center-align">
-        <h2 class="header">Welcome to Moto Club Eire</h2>
-        <a class="waves-effect grey btn-large pulse" href="{{ url_for("members") }}">Our Members</a>
-        <a class="waves-effect grey btn-large pulse" href="{{ url_for("register") }}">Join the Club</a>
-      </div>
+        <div class="row container center-align">
+            <h2 class="header">Welcome to Moto Club Eire</h2>
+            <a class="waves-effect grey btn-large pulse" href="{{ url_for("members") }}">Our Members</a>
+            <a class="waves-effect grey btn-large pulse" href="{{ url_for("register") }}">Join the Club</a>
+        </div>
     </div>
     <div class="parallax-container">
-      <div class="parallax"><img src="{{ url_for("static", filename="img/hero-bike2.jpg") }}" alt="Hero image"></div>
+        <div class="parallax"><img src="{{ url_for("static", filename="img/hero-bike2.jpg") }}" alt="Hero image2"></div>
     </div>
-    
+
 
 {% endblock %}

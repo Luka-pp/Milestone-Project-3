@@ -35,7 +35,7 @@ seen [here](./static/img/python_pep8_good.png).
 
 **Form Validation**
 
-All the form are validated with HTML. Manual testing has been carried out for the forms to confirm they are working
+All the forms are validated with HTML. Manual testing has been carried out for the forms to confirm they are working
 correctly.
 
 1. **Register**
@@ -94,7 +94,7 @@ question.
 1. Chrome
 
     - Everything in perfect order, no layout loss, all animations work perfectly. Forms and validations work as
-      intended. 
+      intended.
 
 2. Opera
 
@@ -110,39 +110,77 @@ Mobile
 
 1. Device / browser
 
-    - One Plus 8T / Chrome: 
+    - One Plus 8T / Chrome: Layout works as intended, All the animations work perfectly. Forms are looking good and
+      sidenav works perfectly.
 2. Device / browser
 
-    - Apple Iphone 12 / Safari:
+    - Apple Iphone 12 / Safari: Layout works as intended, All the animations work perfectly. Forms are looking good and
+      sidenav works perfectly.
 
 3. Device / browser
 
-    - Apple Iphone 12 / Chrome:
+    - Apple Iphone 12 / Chrome: Layout works as intended, All the animations work perfectly. Forms are looking good and
+      sidenav works perfectly.
 
 ### Functionality of website
 
 1. Responsiveness
 
-    -
+    - Materialize library is in charge of the grid and responsiveness. By using their grid I was able to scale website
+      from the smallest of screens to the large desktops. Side navigation works great and quick.
+
 2. Links
 
-    -
+    - All the links on the website have been manually tested and all of them are leading to the intended destinations.
+      Social links currently lead to home pages of the social networks as the club pages are not set up. Tested both on
+      mobile device and on PC.
 3. Buttons
 
-    -
+    - All the buttons have been tested manually. All buttons work and their actions work as intended. Tested both on
+      mobile device and on PC.
 4. Forms
 
-    -
+    - All the form are working as intended and they interact well with the database. There were issues which will be
+      addressed in later sections.
 5. Database
 
-    -
+    - Database performs well, all the necessary data is stored in the corresponding collections. Passwords are encrypted
+      before they get saved in the database.
 6. Deployment
 
-    -
+    - Website has auto deployment from **GitHub** enabled. That beans every time I push the content From my local
+      repository to the remote repository new website build gets created. At the time of writing this the website was on
+      version 64.
 
-### Bugs and fixes
+### Bugs, Errors, Issues and fixes
 
-### Issues encountered
+While performing testing I have encountered a lot of errors and issues and below are some of them:
+
+- While dong the HTML validation 3 errors showed up:
+    1. Footer had a double footer element tags. This was resolved with removing one set of footer elements.
+    2. Duplicate ID. I have created a special padding for a mobile version of the card title and I have targeted it with
+       an ID. I have later changed that and removed that id tag completely and instead targeted the correct div.
+    3. Section lacks heading. While setting up for the project I have left the flash messages in the section tags as
+       they were on the mini project. To resolve that issue I have changed section tags to div tags.
+
+- While doing the form validation testing I have noticed that forms for adding the bike and editing it are not being
+  validated properly. Forms were taking any input including the empty spaces. That issue was resolved by changing all
+  the input fields from *text area* to *input field* and adding the pattern parameters to the fields. At first I have
+  added parameters to the text area field but that did not work.
+
+- After fixing the issue above forms of *Edit bike* and *Add Bike* did not display labels correctly. That was fixed by
+  adding the `type="text"` field which was missing from them.
+
+- Label for the search bar was not displaying properly. That was resolved by wrapping input and label fields in div tag
+  with `input-fiel` class as instructed on Materialize documentation.
+
+- Value was missing on *Bike Nickname* field ond both add bike and edit bike forms. Issue was that I have forgot to
+  add `{{ bike.nickname }}` to value field.
+
+- While testing the registration form I have noticed that I could register over and over again with the same username
+  and different password. After reviewing the code I have discovered that I have misspelled the function in *app.py*. I
+  have written `bikes = mongo.db.bike.find({"owner": user.get("username")})` instead of `bikes = mongo.db.bikes.find({"
+  owner": user.get("username")})`. **Bike** instead of **Bikes** is what was causing the issue.
 
 ### Quality by **Lighthouse**
 

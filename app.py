@@ -2,7 +2,7 @@ import os
 import math
 import re
 
-from flask import Flask, render_template, flash,\
+from flask import Flask, render_template, flash, \
     redirect, url_for, request, session
 from flask_pymongo import PyMongo
 from werkzeug.security import generate_password_hash, check_password_hash

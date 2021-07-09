@@ -37,7 +37,7 @@ main {
     margin-left: 5px;
 }
 
-#sp {
+.sp {
     padding: 12px;
 }
 
@@ -46,7 +46,7 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-    #sp {
+    .sp {
         padding: 0;
     }
 }

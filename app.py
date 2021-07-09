@@ -2,7 +2,8 @@ import os
 import math
 import re
 
-from flask import Flask, render_template, flash, redirect, url_for, request, session
+from flask import Flask, render_template, flash,\
+    redirect, url_for, request, session
 from flask_pymongo import PyMongo
 from werkzeug.security import generate_password_hash, check_password_hash
 from bson.objectid import ObjectId
@@ -31,9 +32,11 @@ def members():
     per_page = 4
     page = int(request.args.get("page", 1))
     total = mongo.db.bikes.count_documents({})
-    all_bikes = mongo.db.bikes.find().skip((page - 1) * per_page).limit(per_page)
+    all_bikes = mongo.db.bikes.find().skip(
+        (page - 1) * per_page).limit(per_page)
     pages = range(1, int(math.ceil(total / per_page)) + 1)
-    return render_template("members.html", bikes=all_bikes, pages=pages, page=page, total=total)
+    return render_template(
+        "members.html", bikes=all_bikes, pages=pages, page=page, total=total)
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -47,7 +50,8 @@ def profile(username):
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        existing_user = mongo.db.user.find_one({"username": request.form.get("username").lower()})
+        existing_user = mongo.db.user.find_one(
+            {"username": request.form.get("username").lower()})
 
         if existing_user:
             flash("Username already exists")
@@ -68,10 +72,12 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        existing_user = mongo.db.user.find_one({"username": request.form.get("username").lower()})
+        existing_user = mongo.db.user.find_one(
+            {"username": request.form.get("username").lower()})
 
         if existing_user:
-            if check_password_hash(existing_user["password"], request.form.get("password")):
+            if check_password_hash(existing_user["password"],
+                                   request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for("profile", username=session["user"]))
@@ -165,7 +171,8 @@ def search():
                 {"model": re.compile(orig_query, re.IGNORECASE)}
             ]
         })
-        return render_template("search.html", query=orig_query, results=results)
+        return render_template(
+            "search.html", query=orig_query, results=results)
     flash("You Cannot enter empty search query, showing all bikes")
     return redirect(url_for("members"))
 

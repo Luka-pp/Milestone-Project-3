@@ -7,9 +7,11 @@
 All the pages on the website have been put through **W3C Markup Validation Service**. There were 3 errors:
 
 1. Footer element in the base.html template had double footer tags. The issue was fixed by removing one of the tags.
+
 2. Duplicate id on the members page was detected. The ID in question was a custom made padding for the card title. I
    have removed the id and placed the *sp* within the class attribute. I have then changed the style.css file by
    changing the id selector for the class selector. That fixed the issue.
+
 3. Section Lacks heading error. Flash messages have been wraped inside the section tag which has caused the error. I
    have changed the tags to div, and the error was fixed.
 
@@ -184,9 +186,12 @@ While performing testing I have encountered a lot of errors and issues and below
   have written `bikes = mongo.db.bike.find({"owner": user.get("username")})` instead of `bikes = mongo.db.bikes.find({"
   owner": user.get("username")})`. **Bike** instead of **Bikes** is what was causing the issue.
 
-- **Google Fonts** are not displaying on the Iphone. I have tried to fix the issue by changing the delivery method from
+- **Google Fonts** are not displaying on the Iphone and on the Ipad. I have tried to fix the issue by changing the delivery method from
   import link in CSS to link in the `head` but it did not work. I have then set up a good fallback font to minify the
   issue.
+
+- Buttons on the *edit_bike* and *add_bike* pages did not have appropriate colour class of grey. that has been fixed.
+
 
 ### Quality by **Lighthouse**
 

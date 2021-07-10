@@ -116,11 +116,13 @@ Mobile
 
     - Apple Iphone 12 / Safari: Layout works as intended, All the animations work perfectly. Forms are looking good and
       sidenav works perfectly.
+    - Issue with google fonts loading detected and font fallback selected. More about this in the later section.
 
 3. Device / browser
 
     - Apple Iphone 12 / Chrome: Layout works as intended, All the animations work perfectly. Forms are looking good and
       sidenav works perfectly.
+    - Issue with google fonts loading detected and font fallback selected. More about this in the later section.
 
 ### Functionality of website
 
@@ -182,13 +184,31 @@ While performing testing I have encountered a lot of errors and issues and below
   have written `bikes = mongo.db.bike.find({"owner": user.get("username")})` instead of `bikes = mongo.db.bikes.find({"
   owner": user.get("username")})`. **Bike** instead of **Bikes** is what was causing the issue.
 
+- **Google Fonts** are not displaying on the Iphone. I have tried to fix the issue by changing the delivery method from
+  import link in CSS to link in the `head` but it did not work. I have then set up a good fallback font to minify the
+  issue.
+
 ### Quality by **Lighthouse**
 
+Websites performance has been checked with **Lighthouse** within Chrome developer tools and results are as follows:
+
 1. Landing Page
+
+![Landing page test](./static/img/home_page_lighthouse.png)
+   
 2. Members Page
+   
+![Landing page test](./static/img/members_page_lighthouse.png)
+
 3. Profile Page
-4. Login Page
-5. Register Page
-6. Edit Bike Page
-7. Delete Bike page
-8. Search Page
+
+![Landing page test](./static/img/profile_page_lighthouse.png)
+   
+4. Add Bike Page
+
+![Landing page test](./static/img/add_bike_page_lighthouse.png)
+   
+5. Edit Bike Page
+
+![Landing page test](./static/img/edit_bike_page_lighthouse.png)
+

@@ -5,7 +5,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    font-family: 'Tourney', cursive;
+    font-family: 'Tourney', cursive, Tahoma, sans-serif;
     font-weight: 900;
 }
 

@@ -16,12 +16,12 @@ All the pages on the website have been put through **W3C Markup Validation Servi
    have changed the tags to div, and the error was fixed.
 
 After fixing above errors I have passed every page one more time through the validation service and no errors were
-detected. The screenshot of the HTML Validation can be seen [here](./static/img/html_validation.png).
+detected. The screenshot of the HTML Validation can be seen [here](readme_and_testing/img/html_validation.png).
 
 **CSS**
 
 Code has been through **W3C CSS Validation Service** and there was one error. I cannot fix that error because it is
-in  *Materialize* library. Screenshot of the error can be seen [here](./static/img/css_validator_error.png)
+in  *Materialize* library. Screenshot of the error can be seen [here](readme_and_testing/img/css_validator_error.png)
 
 **Javascript**
 
@@ -31,9 +31,9 @@ through JSHint and no errors were detected.
 **Python**
 
 The code from app.py has been passed through PEP8 Online. There were 7 lines which were too long which can be
-seen [here](./static/img/python_pep8_bad.png). Those issues were resolved by breaking the long lines into smaller ones.
+seen [here](readme_and_testing/img/python_pep8_bad.png). Those issues were resolved by breaking the long lines into smaller ones.
 Code was once again passed through PEP8 Online and no errors were detected. Screenshot of passed test can be
-seen [here](./static/img/python_pep8_good.png).
+seen [here](readme_and_testing/img/python_pep8_good.png).
 
 **Form Validation**
 
@@ -199,21 +199,21 @@ Websites performance has been checked with **Lighthouse** within Chrome develope
 
 1. Landing Page
 
-![Landing page test](./static/img/home_page_lighthouse.png)
+![Landing page test](readme_and_testing/img/home_page_lighthouse.png)
    
 2. Members Page
    
-![Landing page test](./static/img/members_page_lighthouse.png)
+![Landing page test](readme_and_testing/img/members_page_lighthouse.png)
 
 3. Profile Page
 
-![Landing page test](./static/img/profile_page_lighthouse.png)
+![Landing page test](readme_and_testing/img/profile_page_lighthouse.png)
    
 4. Add Bike Page
 
-![Landing page test](./static/img/add_bike_page_lighthouse.png)
+![Landing page test](readme_and_testing/img/add_bike_page_lighthouse.png)
    
 5. Edit Bike Page
 
-![Landing page test](./static/img/edit_bike_page_lighthouse.png)
+![Landing page test](readme_and_testing/img/edit_bike_page_lighthouse.png)
 

@@ -10,7 +10,7 @@ For link to the website click [Here](https://moto-club-eire.herokuapp.com/)
 
 Application is designed for all screen sizes.
 
-![Am I Responsive](static/img/AmIResponsive.png)
+![Am I Responsive](readme_and_testing/img/AmIResponsive.png)
 
 ## Who is this application for?
 
@@ -29,17 +29,20 @@ Users are also able to post comment under each of the bikes.
 
 1. As a user I want to be able to navigate the website clearly and logically
 2. As a user I want to be able to see all the bikes in the club
-3. As a user I want to be able to register in the club, and s returning user i want to be able to log into my account
+3. As a user I want to be able to register in the club, and s returning user I want to be able to log into my account
 4. As a user I want to add my bike and gear to my profile
 5. As a user I want to be able to see my profile and edit or delete my motorcycles
-6. As a user I want to be able to post a comment under any bike
-7. As a user I want to be able to search for the bikes in the club
+6. As a user I want to be able to search for the bikes in the club   
+7. As a user I want to be able to post a comment under any bike
+
 
 ### Fulfilment of user stories
 
 1. Website is designed in such a way that is easy for user to navigate from page to page. Header and Footer are the same
    throughout the whole website so user is familiar with the layout and can always get to the desired place quickly and
    easily
+    - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_strory_1.1.png) and 
+      [here](readme_and_testing/img/user_story_1.2.png).
 
 
 2. When a user clicks on the Members page on the navigation button or on the **See Our Members** call-to-action button
@@ -47,6 +50,8 @@ Users are also able to post comment under each of the bikes.
    registered user along with the **Find Out More** button on each motorcycle. Layout of the page is made in away that
    image of the motorcycle is taking most of the user's attention with basic details about make and model of the
    motorcycle
+   - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_story_2.1.png), 
+     [here](readme_and_testing/img/user_story_2.2.png) and, [here](readme_and_testing/img/user_story_2.3.png).
 
 
 3. Clicking on the **Register** page in the navigation bar or on the **Join the Club** call-to-action button on landing
@@ -54,26 +59,37 @@ Users are also able to post comment under each of the bikes.
    his/hers username and password which will on the click on submit button create an account and direct user to his/hers
    profile. **Log In** link on the navigation bar directs user to the login page which when user fills in with his
    details logs user back in and directs him/her to the profile page.
+   - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_story_3.1.png) and 
+     [here](readme_and_testing/img/user_story_3.2.png).
 
 
-4. After registering user will be shown an option in the navigation bar for adding his/hers motorcycle and the gear. **
-   Add Bike** page features large contact form where user inputs all of his/hers gear and details of the motorcycle
-   followed by the favorite route.
+4. After registering user will be shown an option in the navigation bar for adding his/hers motorcycle and the 
+   gear. **Add Bike** page features large contact form where user inputs all of his/hers gear and details of the 
+   motorcycle followed by the favorite route.
+   - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_story_4.1.png) and 
+     [here](readme_and_testing/img/user_story_4.2.png).
 
 
 5. When user registers or logs in he/she is then directed to the profile page. Profile page displays all motorcycles
    that user has added. On each motorcycle there are 2 buttons one for *delete* and one for *edit* motorcycle. Delete
    button directs user to the **Delete** page where user needs to confirm the deletion of that motorcycle. **Edit**
    button directs user to prefilled form of that motorcycle where changes can be made and saved.
+   - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_story_5.1.png), 
+     [here](readme_and_testing/img/user_story_5.2.png) and, [here](readme_and_testing/img/user_story_5.3.png).
 
 
-6. Together with all te details about the motorcycle and gear under eac one there is section for the comments. Comments
+6. Members page which features all the motorcycles, and their basic details also contains a search function. When user
+   fills in his/hers query user will be directed to a page where all the relevant results will be displayed.
+   - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_story_6.1.png) and 
+     [here](readme_and_testing/img/user_story_6.2.png).
+    
+
+7. Together with all te details about the motorcycle and gear under eac one there is section for the comments. Comments
    can be added only by the registered users but can be viewed by everyone. Each comment features the comment, and the
    username of the person who posted it.
 
 
-7. Members page which features all the motorcycles, and their basic details also contains a search function. When user
-   fills in his/hers query user will be directed to a page where all the relevant results will be displayed.
+
 
 ## UX 5 Planes
 
@@ -174,7 +190,7 @@ their respective social media and copyright information
 
 This website is designed to work on all the screens.
 
-Wireframes and their evolution can be found [Here](./static/doc/wireframes.pdf)
+Wireframes and their evolution can be found [Here](readme_and_testing/doc/wireframes.pdf)
 
 ### Surface Plane
 

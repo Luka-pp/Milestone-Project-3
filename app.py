@@ -1,3 +1,4 @@
+# Python Imports
 import os
 import math
 import re
@@ -11,12 +12,16 @@ from bson.objectid import ObjectId
 if os.path.exists("env.py"):
     import env
 
+# Instance of Flask
 app = Flask(__name__)
 
+
+# MongoDB Configuration
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
+# Instance of Flask
 mongo = PyMongo(app)
 
 

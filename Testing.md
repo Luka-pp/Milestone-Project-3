@@ -1,5 +1,65 @@
 ## TESTING
 
+### User Stories
+
+1. As a user I want to be able to navigate the website clearly and logically
+2. As a user I want to be able to see all the bikes in the club
+3. As a user I want to be able to register in the club, and s returning user I want to be able to log into my account
+4. As a user I want to add my bike and gear to my profile
+5. As a user I want to be able to see my profile and edit or delete my motorcycles
+6. As a user I want to be able to search for the bikes in the club   
+
+
+
+### Fulfilment of user stories
+
+1. Website is designed in such a way that is easy for user to navigate from page to page. Header and Footer are the same
+   throughout the whole website so user is familiar with the layout and can always get to the desired place quickly and
+   easily
+    - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_strory_1.1.png) and 
+      [here](readme_and_testing/img/user_story_1.2.png).
+
+
+2. When a user clicks on the Members page on the navigation button or on the **See Our Members** call-to-action button
+   on the landing page, user is directed to the **Members** page. Members page displays all the Bikes from the
+   registered user along with the **Find Out More** button on each motorcycle. Layout of the page is made in away that
+   image of the motorcycle is taking most of the user's attention with basic details about make and model of the
+   motorcycle
+   - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_story_2.1.png), 
+     [here](readme_and_testing/img/user_story_2.2.png) and, [here](readme_and_testing/img/user_story_2.3.png).
+
+
+3. Clicking on the **Register** page in the navigation bar or on the **Join the Club** call-to-action button on landing
+   page user is directed to the registration page. This page features very simple but effective form. User chooses
+   his/hers username and password which will on the click on submit button create an account and direct user to his/hers
+   profile. **Log In** link on the navigation bar directs user to the login page which when user fills in with his
+   details logs user back in and directs him/her to the profile page.
+   - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_story_3.1.png) and 
+     [here](readme_and_testing/img/user_story_3.2.png).
+
+
+4. After registering user will be shown an option in the navigation bar for adding his/hers motorcycle and the 
+   gear. **Add Bike** page features large contact form where user inputs all of his/hers gear and details of the 
+   motorcycle followed by the favorite route.
+   - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_story_4.1.png) and 
+     [here](readme_and_testing/img/user_story_4.2.png).
+
+
+5. When user registers or logs in he/she is then directed to the profile page. Profile page displays all motorcycles
+   that user has added. On each motorcycle there are 2 buttons one for *delete* and one for *edit* motorcycle. Delete
+   button directs user to the **Delete** page where user needs to confirm the deletion of that motorcycle. **Edit**
+   button directs user to prefilled form of that motorcycle where changes can be made and saved.
+   - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_story_5.1.png), 
+     [here](readme_and_testing/img/user_story_5.2.png) and, [here](readme_and_testing/img/user_story_5.3.png).
+
+
+6. Members page which features all the motorcycles, and their basic details also contains a search function. When user
+   fills in his/hers query user will be directed to a page where all the relevant results will be displayed.
+   - Screenshots of the fulfillment can be seen [here](readme_and_testing/img/user_story_6.1.png) and 
+     [here](readme_and_testing/img/user_story_6.2.png).
+     
+
+
 ### **Code Validation**
 
 **HTML**
@@ -8,11 +68,11 @@ All the pages on the website have been put through **W3C Markup Validation Servi
 
 1. Footer element in the base.html template had double footer tags. The issue was fixed by removing one of the tags.
 
-2. Duplicate id on the members page was detected. The ID in question was a custom made padding for the card title. I
+2. Duplicate id on the members page was detected. The ID in question was a custom-made padding for the card title. I
    have removed the id and placed the *sp* within the class attribute. I have then changed the style.css file by
    changing the id selector for the class selector. That fixed the issue.
 
-3. Section Lacks heading error. Flash messages have been wraped inside the section tag which has caused the error. I
+3. Section Lacks heading error. Flash messages have been wrapped inside the section tag which has caused the error. I
    have changed the tags to div, and the error was fixed.
 
 After fixing above errors I have passed every page one more time through the validation service and no errors were
@@ -46,7 +106,7 @@ correctly.
     - Instructions for the users are placed underneath the form.
     - Manual testing has been carried out with multiple different combinations of usernames and passwords and form works
       as intended. Username is saved to the User collection in the database. For security reasons password is first
-      encrypted and then saved the same way.
+      encrypted by **Werkzeug** and then saved the same way.
     - If user trys to register again with the username that already exists flash message will be shown to the user that
       username is already in use
 
@@ -56,7 +116,7 @@ correctly.
       flash message will display letting user know that username or password are not correct.
 
 3. **Add Bike**
-    - All the fields work as intended. form focuses on the field properly and is validated.
+    - All the fields work as intended. Form focuses on the field properly and is validated.
     - All the fields are correctly saved to the database.
     - Manual testing of all the fields carried out.
 
@@ -152,13 +212,13 @@ Mobile
       before they get saved in the database.
 6. Deployment
 
-    - Website has auto deployment from **GitHub** enabled. That beans every time I push the content From my local
+    - Website has auto deployment from **GitHub** enabled. That means every time I push the content from my local
       repository to the remote repository new website build gets created. At the time of writing this the website was on
       version 64.
 
 ### Bugs, Errors, Issues and fixes
 
-While performing testing I have encountered a lot of errors and issues and below are some of them:
+While performing testing I have encountered a lot of errors and issues, below are some of them:
 
 - While dong the HTML validation 3 errors showed up:
     1. Footer had a double footer element tags. This was resolved with removing one set of footer elements.
@@ -169,7 +229,7 @@ While performing testing I have encountered a lot of errors and issues and below
 
 - While doing the form validation testing I have noticed that forms for adding the bike and editing it are not being
   validated properly. Forms were taking any input including the empty spaces. That issue was resolved by changing all
-  the input fields from *text area* to *input field* and adding the pattern parameters to the fields. At first I have
+  the input fields from *text area* to *input field* and adding the pattern parameters to the fields. At first, I have
   added parameters to the text area field but that did not work.
 
 - After fixing the issue above forms of *Edit bike* and *Add Bike* did not display labels correctly. That was fixed by

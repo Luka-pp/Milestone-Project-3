@@ -179,12 +179,14 @@ Mobile
     - Apple Iphone 12 / Safari: Layout works as intended, All the animations work perfectly. Forms are looking good and
       sidenav works perfectly.
     - Issue with google fonts loading detected and font fallback selected. More about this in the later section.
+    - Resolved
 
 3. Device / browser
 
     - Apple Iphone 12 / Chrome: Layout works as intended, All the animations work perfectly. Forms are looking good and
       sidenav works perfectly.
     - Issue with google fonts loading detected and font fallback selected. More about this in the later section.
+    - Resolved
 
 ### Functionality of website
 
@@ -248,7 +250,8 @@ While performing testing I have encountered a lot of errors and issues, below ar
 
 - **Google Fonts** are not displaying on the Iphone and on the Ipad. I have tried to fix the issue by changing the delivery method from
   import link in CSS to link in the `head` but it did not work. I have then set up a good fallback font to minify the
-  issue.
+  issue. **After researching the issue more deeply, I have found out that there is an issue with variable fonts on 
+  Iphone and on ipad, after removing the variable font issue was resolved.**
 
 - Buttons on the *edit_bike* and *add_bike* pages did not have appropriate colour class of grey. that has been fixed.
 
